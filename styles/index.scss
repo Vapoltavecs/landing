@@ -1,0 +1,171 @@
+$white: #ffffff;
+$ocean: #31f3ff;
+$blue: #2074d6;
+$violet: #fb3fff;
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url(../fonts/Gotham/GothamPro-Medium.eot);
+  src: local("Gotham Pro Medium"), local("GothamPro-Medium"),
+    url(../fonts/Gotham/GothamPro-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/Gotham/GothamPro-Medium.woff) format("woff"),
+    url(../fonts/Gotham/GothamPro-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url(../fonts/Gotham/GothamPro-Bold.eot);
+  src: local("Gotham Pro Bold"), local("GothamPro-Bold"),
+    url(../fonts/Gotham/GothamPro-Bold.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/Gotham/GothamPro-Bold.woff) format("woff"),
+    url(../fonts/Gotham/GothamPro-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url(../fonts/Gotham/GothamPro-Light.eot);
+  src: local("Gotham Pro Light"), local("GothamPro-Light"),
+    url(../fonts/Gotham/GothamPro-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/Gotham/GothamPro-Light.woff) format("woff"),
+    url(../fonts/Gotham/GothamPro-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url(../fonts/Gotham/GothamPro.eot);
+  src: local("Gotham Pro"), local("GothamPro"),
+    url(../fonts/Gotham/GothamPro.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/Gotham/GothamPro.woff) format("woff"),
+    url(../fonts/Gotham/GothamPro.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  font-family: "Gotham Pro", "sans-serif";
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 30px 0px;
+  border-bottom: 1px solid rgba($color: $white, $alpha: 0.3);
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &-item {
+      font-size: 14px;
+      color: $white;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin: 0 14px;
+      transition: all 0.3s;
+      &:hover {
+        color: $ocean;
+      }
+    }
+  }
+
+  &__menu-user {
+    &-item {
+      &:last-child {
+        position: relative;
+        color: $blue;
+        margin-left: 66px;
+        padding: 14px 0px;
+        &::before {
+          content: "";
+          height: 40px;
+          width: 1px;
+          background-color: rgba($color: #ffffff, $alpha: 0.3);
+          top: 0;
+          position: absolute;
+          left: -33px;
+        }
+      }
+      &:hover {
+        color: $ocean;
+      }
+    }
+  }
+  &__logo {
+    margin: 0px 340px 0px 80px;
+  }
+}
+
+.promo {
+  height: calc(100vh - 170px);
+  box-sizing: border-box;
+  background-image: url("../images/bg-1.png");
+  background-size: auto;
+  text-align: center;
+  background-position: center center;
+  &__title {
+    text-align: center;
+    padding-top: 70px;
+    color: $white;
+    font-size: 3.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 1.375em;
+    max-width: 890px;
+    margin: 30px auto 60px;
+    color: $white;
+    font-weight: 400;
+    text-transform: uppercase;
+    white-space: pre-line;
+    line-height: 150%;
+  }
+  &__info {
+    text-align: center;
+    color: white;
+    font-size: 1.25em;
+  }
+
+  &__button {
+    font-size: 1.5em;
+    background-color: $violet;
+    display: inline-block;
+    padding: 35px 30px;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    border-radius: 68px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+    letter-spacing: 0.05em;
+    z-index: 5;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      width: 100%;
+      height: 100%;
+      background-color: $violet;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      filter: blur(10px);
+      border-radius: 68px;
+      opacity: 1;
+    }
+  }
+}
