@@ -2,6 +2,11 @@ $white: #ffffff;
 $ocean: #31f3ff;
 $blue: #2074d6;
 $violet: #fb3fff;
+$gray: #c4c4c4;
+body {
+  margin: 0;
+  padding: 0;
+}
 
 @font-face {
   font-family: "Gotham Pro";
@@ -50,6 +55,11 @@ body {
   font-family: "Gotham Pro", "sans-serif";
 }
 
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -76,12 +86,14 @@ body {
   }
 
   &__menu-user {
+    font-weight: 500;
     &-item {
       &:last-child {
         position: relative;
         color: $blue;
         margin-left: 66px;
         padding: 14px 0px;
+        font-weight: 700;
         &::before {
           content: "";
           height: 40px;
@@ -106,10 +118,11 @@ body {
   height: calc(100vh - 170px);
   box-sizing: border-box;
   background-image: url("../images/bg-1.png");
-  background-size: auto;
+
   text-align: center;
   background-position: center center;
   &__title {
+    letter-spacing: 0.05em;
     text-align: center;
     padding-top: 70px;
     color: $white;
@@ -118,6 +131,7 @@ body {
     text-transform: uppercase;
   }
   &__subtitle {
+    letter-spacing: 0.05em;
     text-align: center;
     font-size: 1.375em;
     max-width: 890px;
@@ -147,7 +161,7 @@ body {
     letter-spacing: 0.05em;
     border-radius: 68px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
     cursor: pointer;
     position: relative;
     letter-spacing: 0.05em;
@@ -155,17 +169,494 @@ body {
     &::before {
       content: "";
       width: 100%;
-      height: 100%;
-      width: 100%;
-      height: 100%;
-      background-color: $violet;
+      left: 50%;
+
+      height: 100px;
+      background-color: #fb3fff;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      margin-top: -50px;
       z-index: -1;
-      filter: blur(10px);
+      filter: blur(22px);
       border-radius: 68px;
       opacity: 1;
+      transition: all 0.3s;
+    }
+    &::before {
+      left: 0%;
+    }
+  }
+
+  &__social {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 10px;
+      padding: 10px 15px;
+      border: 1px solid #7d49bf;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      font-size: 1em;
+      background: rgba(72, 37, 135, 0.2);
+      border-radius: 10px;
+    }
+    &-text {
+      margin-left: 20px;
+    }
+  }
+}
+
+.marqee {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  background-color: black;
+  z-index: 2;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+
+  &-item {
+    display: inline-block;
+    -webkit-animation: marqueez 60s linear infinite;
+    animation: marqueez 60s linear infinite;
+    max-height: calc(73px + (15 + 15 * 0.25) * ((100vw - 375px) / 1920));
+    vertical-align: middle;
+    border-style: none;
+    animation: marqee 60s linear infinite;
+    padding: 46px 0px 35px;
+  }
+}
+
+@keyframes marqee {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-4000px);
+    transform: translateX(-4000px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.sale {
+  margin-top: 150px;
+  background: url("../images/sale-bg.png") top center;
+  background-repeat: no-repeat;
+  &__title {
+    font-size: 4.688em;
+    color: $white;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 102.2%;
+  }
+  &__subtitle {
+    color: $gray;
+    font-weight: 300;
+    font-size: 1.125em;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+    line-height: 102.2%;
+  }
+  &__charts {
+    margin-top: 135px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .charts__item {
+    min-width: 20%;
+    &-title {
+      color: $white;
+      font-size: 0.875em;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &-group {
+      margin-top: 12px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 1.125em;
+      font-weight: 400;
+      color: $white;
+    }
+    &-offer {
+      color: #808080;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 0.875em;
+      text-align: center;
+      letter-spacing: 0.05em;
+      margin-top: 23px;
+    }
+    &-chart {
+      display: block;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+    &-sale {
+      font-weight: 700;
+      background: linear-gradient(
+          93.44deg,
+          #3b68e6 0.84%,
+          #31f3ff 50.94%,
+          #fb3fff 100%
+        ),
+        #ffffff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 1.125em;
+      text-align: center;
+      margin-top: 7px;
+    }
+  }
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  position: relative;
+  &-item {
+    min-width: 20%;
+
+    .round {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: url("../images/icons/uncheck.png");
+
+      box-shadow: inset 0px 4px 13px rgba(255, 255, 255, 0.25);
+
+      background-color: black;
+      &.checked {
+        background: url("../images/icons/check.png");
+      }
+    }
+  }
+  &__line {
+    width: 80%;
+    background: conic-gradient(
+        from 141.91deg at -2.19% 16.98%,
+        #14bdff 0deg,
+        rgba(20, 189, 255, 0) 267.71deg,
+        #14bdff 360deg
+      ),
+      radial-gradient(
+          80.2% 129.9% at 96.3% 0%,
+          #c51bff 0%,
+          rgba(3, 57, 89, 0) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      radial-gradient(
+          72.79% 65.22% at 80.51% 92.28%,
+          rgba(68, 220, 255, 0.71) 0%,
+          rgba(120, 199, 217, 0) 84.87%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      #3042ff;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    margin-top: -2.5px;
+    z-index: -1;
+    left: 10%;
+  }
+}
+
+.units {
+  margin-top: 230px;
+  background: url("../images/units-bg.png");
+  height: 130vh;
+
+  color: $white;
+  &__title {
+    font-weight: 400;
+    font-size: 4.688em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 102.2%;
+  }
+  &__subtitle {
+    color: $gray;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.125em;
+    font-weight: 300;
+  }
+  &__cards {
+    margin-top: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    &-item {
+      box-sizing: border-box;
+      padding: 30px 40px 0px;
+      width: 33%;
+    }
+  }
+
+  .cards__item {
+    position: relative;
+    margin-right: 40px;
+    min-height: 590px;
+    box-sizing: border-box;
+    position: relative;
+    &:last-child {
+      margin-right: 0;
+    }
+    background: url("../images/unit-card-grid.png");
+    background-size: cover;
+    &-title {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 102.2%;
+      /* or 29px */
+      box-sizing: border-box;
+
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      background: linear-gradient(
+          93.44deg,
+          #3b68e6 0.84%,
+          #31f3ff 50.94%,
+          #fb3fff 100%
+        ),
+        #ffffff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    &-sheme {
+      box-sizing: border-box;
+      margin: 0 auto;
+      margin-top: 50px;
+      display: block;
+      width: auto;
+    }
+
+    .scheme-wrap {
+      position: relative;
+      &::before {
+        background: url("../images/units/$.png") center center;
+        background-size: cover;
+        z-index: 5;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+
+        position: absolute;
+        box-sizing: border-box;
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        margin-left: -30px;
+        bottom: -10px;
+      }
+
+      &::after {
+        filter: blur(20px);
+        z-index: 1;
+        border-radius: 50%;
+        background: radial-gradient(
+              66.58% 146.41% at -2.19% 16.98%,
+              #14bdff 0%,
+              rgba(3, 57, 89, 0) 74.36%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+              80.2% 129.9% at 96.3% 0%,
+              #c51bff 0%,
+              rgba(3, 57, 89, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+              72.79% 65.22% at 80.51% 92.28%,
+              rgba(68, 220, 255, 0.71) 0%,
+              rgba(120, 199, 217, 0) 84.87%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          #3042ff;
+      }
+    }
+    .effect {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: radial-gradient(
+            243.28% 101.19% at 42.43% 105.46%,
+            #00277a 0%,
+            rgba(3, 57, 89, 0) 74.36%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+            66.58% 146.41% at -2.19% 16.98%,
+            #20c0ff 0%,
+            rgba(3, 57, 89, 0) 74.36%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+            80.2% 129.9% at 96.3% 0%,
+            #ca2dff 0%,
+            rgba(3, 57, 89, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        #140359;
+      opacity: 0.3;
+      z-index: -1;
+    }
+  }
+}
+
+.benefits {
+  padding-top: 80px;
+  height: 100vh;
+  width: 100%;
+
+  background: url("../images/benefits/bg-benefits.png") top center;
+
+  &__title {
+    text-align: center;
+    font-size: 4.688em;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  &__subtitle {
+    margin-top: 30px;
+    text-align: center;
+    color: $gray;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1.125em;
+  }
+  &__scheme {
+    margin-top: 150px;
+    width: 100%;
+    background: url("../images/benefits/border-benefits.png") center;
+    background-repeat: no-repeat;
+
+    &-item {
+      display: flex;
+    }
+  }
+
+  &__middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 70px;
+    &-subtitle {
+      margin-top: 30px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      /* or 21px */
+
+      text-align: center;
+      color: white;
+      max-width: 400px;
+      margin: 20px 90px;
+    }
+    &-title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      margin: 0px 90px;
+      /* or 21px */
+
+      text-align: center;
+      max-width: 400px;
+      color: $white;
+    }
+  }
+  &__top {
+    align-items: flex-start;
+    justify-content: center;
+    &-text {
+      max-width: 300px;
+      color: white;
+      font-weight: 400;
+      line-height: 130%;
+      text-align: center;
+      margin: 25px 80px 0px;
+      min-height: 175px;
+      padding-bottom: 50px;
+      &:first-child {
+        max-width: 308px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    &-text {
+      max-width: 325px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      /* or 21px */
+      margin-top: 5 0px;
+      text-align: center;
+
+      color: #ffffff;
+    }
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url("../images/benefits/bg-card.png");
+    background-size: cover;
+    min-width: 400px;
+    margin-left: -7px;
+    &-title {
+      max-width: 170px;
+      text-align: center;
+      margin: 0 auto;
+      color: white;
+      font-size: 1.563em;
+      font-weight: 700;
+      white-space: pre-line;
+      text-transform: uppercase;
+    }
+    &-img {
+      margin-right: 40px;
+      display: block;
     }
   }
 }
