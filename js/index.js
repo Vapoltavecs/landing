@@ -1,49 +1,86 @@
 const modal1 = document.querySelector(".modal1");
-const openModal1Btn = document.querySelector(".meta-rent");
-const closeModal1Btn = modal1.querySelector(".close");
 
 const modal2 = document.querySelector(".modal2");
-const openModal2Btn = document.querySelector(".scholarship");
-const closeModal2Btn = modal2.querySelector(".close");
 
 const modal3 = document.querySelector(".modal3");
-const open3Modal = document.querySelector(".clan");
 
-const closeModal3Btn = modal3.querySelector(".close");
+const AddModal = (modalBlock, openBtn) => {
+  const closeBtn = modalBlock.querySelector(".close");
+  openBtn.addEventListener("click", () => {
+    modalBlock.classList.add("active");
+    const modal = modalBlock.querySelector(".modal");
+    const overlay = modalBlock.querySelector(".overlay");
 
-openModal1Btn.addEventListener("click", () => {
-  modal1.classList.add("active");
+    toggleOpacityAnim(overlay);
+    toggleAnim(modal);
+  });
+  closeBtn.addEventListener("click", () => {
+    const modal = modalBlock.querySelector(".modal");
+    toggleAnim(modal, "reverse").addEventListener("finish", () => {
+      modalBlock.classList.remove("active");
+    });
+  });
+};
+
+[modal1, modal2, modal3].forEach((el, i) => {
+  const openBtn = document.querySelector(`.open-modal-${i + 1}`);
+  AddModal(el, openBtn);
 });
 
-closeModal1Btn.addEventListener("click", () => {
-  modal1.classList.remove("active");
-});
+function toggleAnim(element, direction) {
+  return element.animate(
+    [
+      { transform: "translateX(-50%) translateY(-100%)", opacity: 0 },
+      { transform: "translateX(-50%) translateY(-50%)", opacity: 1 },
+    ],
+    {
+      duration: 300,
+      fill: "forwards",
+      easing: "ease-in",
+      direction,
+    }
+  );
+}
 
-openModal2Btn.addEventListener("click", () => {
-  modal2.classList.add("active");
-});
+function toggleOpacityAnim(element, direction) {
+  return element.animate([{ opacity: 0 }, { opacity: 1 }], {
+    duration: 300,
+    fill: "forwards",
+    easing: "ease-in",
+    direction,
+  });
+}
 
-closeModal2Btn.addEventListener("click", () => {
-  modal2.classList.remove("active");
-});
+const langDiv = document.querySelectorAll(".languange-lang");
+const langWrap = document.querySelectorAll(".languange");
 
-open3Modal.addEventListener("click", () => {
-  modal3.classList.add("active");
-});
+[...langWrap].forEach((el) => {
+  const lang = el.querySelector(".change-lang");
+  const menu = el.querySelector(".languange__list");
 
-closeModal3Btn.addEventListener("click", () => {
-  modal3.classList.remove("active");
-});
+  lang.addEventListener("click", () => {
+    menu.classList.add("active");
+    toggleOpacityAnim(menu);
+  });
 
-// function toggleAnim(element, direction) {
-//   return element.animate(
-//     [
-//       { transform: "translate3D(0, 0, 0)" },
-//       { transform: "translate3D(0, -300px, 0)" },
-//     ],
-//     {
-//       duration: 500,
-//       direction,
-//     }
-//   );
-// }
+  menu.addEventListener("click", ({ target }) => {
+    if (target.classList.contains("languange__list-item")) {
+      langDiv.forEach((el) => (el.innerText = target.innerText));
+      toggleOpacityAnim(menu, "reverse").addEventListener("finish", () => {
+        menu.classList.remove("active");
+      });
+    }
+  });
+  window.addEventListener("click", ({ target }) => {
+    if (
+      !target.classList.contains("change-lang") &&
+      !target.classList.contains("languange__list") &&
+      !target.classList.contains("languange-icon") &&
+      !target.classList.contains("languange-lang")
+    ) {
+      toggleOpacityAnim(menu, "reverse").addEventListener("finish", () => {
+        menu.classList.remove("active");
+      });
+    }
+  });
+});

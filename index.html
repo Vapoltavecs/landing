@@ -22,7 +22,19 @@
         </nav>
         <img src="./images/logo.png" class="header__logo">
         <nav class="header__menu header__menu-user">
-            <a href="" class="header__menu-item header__menu-user-item">en</a>
+            <div class="">
+                <div class="languange">
+                    <div class="change-lang">
+                        <div class="languange-lang">en</div>
+                        <img src="./images/icons/arrow.png" class="languange-icon">
+                    </div>
+                    <div class="languange__list">
+                        <div class="languange__list-item">en</div>
+                        <div class="languange__list-item">fl</div>
+                        <div class="languange__list-item">fr</div>
+                    </div>
+                </div>
+            </div>
             <a href="" class="header__menu-item header__menu-user-item">log in</a>
             <a href="" class="header__menu-item header__menu-user-item">sign up</a>
             <a href="" class="header__menu-item header__menu-user-item">connect wallet</a>
@@ -129,17 +141,17 @@
         <div class="units__subtitle">our units</div>
         <div class="container">
             <div class="units__cards">
-                <div class="units__cards-item cards__item meta-rent">
+                <div class="units__cards-item cards__item open-modal-1">
                     <div class="cards__item-title">Meta Rent</div>
                     <div class="effect"></div>
                     <img src="./images/units/1.png" alt="scheme" class="cards__item-sheme">
                 </div>
-                <div class="units__cards-item cards__item scholarship">
+                <div class="units__cards-item cards__item open-modal-2">
                     <div class="cards__item-title">Scholarship</div>
                     <div class="effect"></div>
                     <img src="./images/units/2.png" alt="scheme" class="cards__item-sheme">
                 </div>
-                <div class="units__cards-item cards__item clan">
+                <div class="units__cards-item cards__item open-modal-3">
                     <div class="cards__item-title ">Clan</div>
                     <div class="effect"></div>
                     <div class="scheme-wrap">
@@ -727,7 +739,19 @@
                     </a>
                 </div>
                 <div class="right__nav-user">
-                    <div class="right__nav-lang right__nav-user-item">en</div>
+                    <div class="">
+                        <div class="languange">
+                            <div class="change-lang">
+                                <div class="languange-lang">en</div>
+                                <img src="./images/icons/arrow.png" class="languange-icon">
+                            </div>
+                            <div class="languange__list">
+                                <div class="languange__list-item">en</div>
+                                <div class="languange__list-item">fl</div>
+                                <div class="languange__list-item">fr</div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="right__nav-user-item">Log in</div>
                     <div class="right__nav-user-item">Sign up</div>
                 </div>
@@ -736,7 +760,7 @@
         <div class="subtitle">Your new future world</div>
     </footer>
     <div class="modal-wrap modal1">
-        <div class="modal__overlay"></div>
+        <div class="overlay"></div>
         <div class="modal modal-meta-rent">
             <div class="modal__title">how does meta rent work <img src="./images/icons/close.png" alt="close"
                     class="close"></div>
@@ -769,169 +793,168 @@
         </div>
     </div>
     <div class="modal2">
-        <div class="modal__overlay"></div>
-        <div class="modal">
-            <div class="modal__wrapper">
-                <div class="modal__title">
-                    <h1 class="modal__title-text">principles of meta dao guild scholarship
-                    </h1>
-                    <div class="modal__title-cross close">
-                        <img src="./images/modal-2/cross.svg" alt="">
+        <div class="overlay">div>
+
+            <div class="modal">
+                <div class="modal__content">
+                    <div class="modal-container">
+                        <img src="./images/icons/close.png" alt="close" class="close">
+                        <div class="modal__title">
+                            principles of meta dao guild scholarship
+
+                        </div>
+                        <div class="modal__user">
+                            <div class="modal__user-photo user" style="background: url('./images/modal2/1.png');">
+                                <div class="angle">
+                                    <div class="angle-item angle-item-tl"></div>
+                                    <div class="angle-item angle-item-tr"></div>
+                                    <div class="angle-item angle-item-bl"></div>
+                                    <div class="angle-item angle-item-br"></div>
+                                </div>
+                                <div class="user__name">Player name</div>
+                            </div>
+                            <div class="modal__user-text">
+                                <div class="modal__user-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed
+                                    do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                                <div class="modal__user-subtitle">Duis aute irure dolor in reprehenderit in voluptate
+                                    velit
+                                    esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident,
+                                    sunt
+                                    in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                                    amet,
+                                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip
+                                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                    esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident,
+                                    sunt
+                                    in culpa qui officia deserunt mollit anim id est laborum</div>
+                            </div>
+                        </div>
+                        <div class="modal__user">
+
+                            <div class="modal__user-text">
+                                <div class="modal__user-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed
+                                    do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                                <div class="modal__user-subtitle">Duis aute irure dolor in reprehenderit in voluptate
+                                    velit
+                                    esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident,
+                                    sunt
+                                    in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                                    amet,
+                                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                    magna
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip
+                                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                    esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident,
+                                    sunt
+                                    in culpa qui officia deserunt mollit anim id est laborum</div>
+                            </div>
+                            <div class="modal__user-photo user" style="background: url('./images/modal2/2.png');">
+                                <div class="angle">
+                                    <div class="angle-item angle-item-tl"></div>
+                                    <div class="angle-item angle-item-tr"></div>
+                                    <div class="angle-item angle-item-bl"></div>
+                                    <div class="angle-item angle-item-br"></div>
+                                </div>
+                                <div class="user__name">Player name</div>
+                            </div>
+                        </div>
+                        <div class="modal__cards">
+                            <div class="modal__cards-item card" style="background: url('./images/modal2/card-1.png');">
+                                <div class="angle">
+                                    <div class="angle-item angle-item-tl"></div>
+                                    <div class="angle-item angle-item-tr"></div>
+                                    <div class="angle-item angle-item-bl"></div>
+                                    <div class="angle-item angle-item-br"></div>
+                                </div>
+                                <img src="./images/modal2/1-card.png" alt="card" class="card__img">
+                            </div>
+                            <div class="modal__cards-item card" style="background: url('./images/modal2/card-2.png');">
+                                <div class="angle">
+                                    <div class="angle-item angle-item-tl"></div>
+                                    <div class="angle-item angle-item-tr"></div>
+                                    <div class="angle-item angle-item-bl"></div>
+                                    <div class="angle-item angle-item-br"></div>
+                                </div>
+                                <img src="./images/modal2/2-card.png" alt="card" class="card__img">
+                            </div>
+                            <div class="modal__cards-item card" style="background: url('./images/modal2/card-3.png');">
+                                <div class="angle">
+                                    <div class="angle-item angle-item-tl"></div>
+                                    <div class="angle-item angle-item-tr"></div>
+                                    <div class="angle-item angle-item-bl"></div>
+                                    <div class="angle-item angle-item-br"></div>
+                                </div>
+                                <img src="./images/modal2/3-card.png" alt="card" class="card__img item-3">
+                            </div>
+                            <div class="modal__cards-item card" style="background: url('./images/modal2/card-4.png');">
+                                <div class="angle">
+                                    <div class="angle-item angle-item-tl"></div>
+                                    <div class="angle-item angle-item-tr"></div>
+                                    <div class="angle-item angle-item-bl"></div>
+                                    <div class="angle-item angle-item-br"></div>
+                                </div>
+                                <img src="./images/modal2/4-card.png" alt="card" class="card__img">
+                            </div>
+                        </div>
+                        <div class="modal__button">
+                            <div class="button">join pre white list</div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="modal__contents">
-                    <div class="modal__contents-wrapper-top">
-                        <div class="modal__contents-wrapper-top-img">
-                            <img src="./images/modal-2/player1.jpg" alt="">
-                            <h3 class="modal__contents-wrapper-top-img-name">Player name</h3>
-                        </div>
-
-                        <div class="modal__contents-wrapper-top-text">
-                            <div class="modal__contents-wrapper-top-text-one">
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-                            </div>
-                            <div class="modal__contents-wrapper-top-text-two">
-                                <h4>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat
-                                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut
-                                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea
-                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                    sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal__contents-wrapper-bottom">
-                        <div class="modal__contents-wrapper-bottom-text">
-                            <div class="modal__contents-wrapper-bottom-text-top">
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-                            </div>
-                            <div class="modal__contents-wrapper-bottom-text-bottom">
-                                <h4>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat
-                                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut
-                                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea
-                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                    sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum</h4>
-                            </div>
-                        </div>
-                        <div class="modal__contents-wrapper-bottom-img">
-                            <img src="./images/modal-2/player2.jpg" alt="">
-                            <h3 class="modal__contents-wrapper-bottom-img-name">Player name</h3>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal__contents-cards">
-                    <img class="modal__contents-cards-item" src="./images/modal-2/card1.jpg" alt="">
-                    <img class="modal__contents-cards-item" src="./images/modal-2/card2.jpg" alt="">
-                    <img class="modal__contents-cards-item" src="./images/modal-2/card3.svg" alt="">
-                    <img class="modal__contents-cards-item" src="./images/modal-2/card4.jpg" alt="">
-                </div>
-                <div class="modal2-button">
-                    <button class="button">join pre white list</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="modal3">
-        <div class="modal__overlay"></div>
-        <div class="modal__clans">
-            <div class="modal__clans__wrapper">
-                <div class="modal__clans__wrapper__title">
-                    <h1 class="modal__clans__wrapper__title-text">Clans</h1>
-                    <div class="modal__clans__wrapper__title-cross close">
-                        <img src="./images/modal-2/cross.svg" alt="">
-                    </div>
+        <div class="overlay">
 
+        </div>
+        <div class="modal">
+            <div class="modal__title">Clans</div>
+            <img src="./images/icons/close.png" alt="close" class="close">
+            <div class="modal__content">
+                <img src="./images/modal3/scheme.png" alt="scheme" class="scheme">
+                <div class="modal__content-text content">
+                    <div class="content__item">Meta DAO is the first guild within which members can create their own
+                        guilds (Clans).</div>
+                    <div class="content__item">A Clan is a self-govering organization inside the Guild, that organizes
+                        education of players and receives a part of income. Now it’s really easy to set up your own
+                        guild!</div>
+                    <div class="content__item">The Guild rents out NFT to the Сlan, receiving its part of income. Guild
+                        helps with studying and community management.</div>
+                    <div class="content__item">The Clan Leader pays a fee in MDGG tokens for the clan creating and
+                        expansion. The fee is completely burned to assue the value of token (deflationary model).</div>
+                    <div class="modal__button">
+                        <div class="button">Download</div>
+                    </div>
                 </div>
-
-                <div class="modal__clans__wrapper-content">
-                    <div class="modal__clans__wrapper-content-left">
-
-                        <div class="modal__clans__wrapper-content-left-cards">
-                            <div class="modal__clans__wrapper-cards-item">
-                                <img class="modal__clans__wrapper-content-left-cards-item-card"
-                                    src="./images/modal-3/card-1.svg" alt="">
-                                <img class="modal__clans__wrapper-content-left-cards-item-arrow"
-                                    src="./images/modal-3/arrow.svg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="modal__clans__wrapper-content-left-cards">
-                            <div class="modal__clans__wrapper-cards-item">
-                                <img class="modal__clans__wrapper-content-left-cards-item-card"
-                                    src="./images/modal-3/card-2.svg" alt="">
-                                <img class="modal__clans__wrapper-content-left-cards-item-arrow"
-                                    src="./images/modal-3/arrow.svg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="modal__clans__wrapper-content-left-cards">
-                            <div class="modal__clans__wrapper-cards-item">
-                                <img class="modal__clans__wrapper-content-left-cards-item-card"
-                                    src="./images/modal-3/card-3.svg" alt="">
-                                <img class="modal__clans__wrapper-content-left-cards-item-arrow"
-                                    src="./images/modal-3/arrow.svg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="modal__clans__wrapper-content-left-cards">
-                            <div class="modal__clans__wrapper-cards-item">
-                                <img class="modal__clans__wrapper-content-left-cards-item-card"
-                                    src="./images/modal-3/card-4.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal__clans__wrapper-content-right">
-                        <h3 class="modal__clans__wrapper-content-right-text-bold">Meta DAO is the first guild within
-                            which
-                            members can create their own guilds (Clans).</h3>
-                        <h3 class="modal__clans__wrapper-content-right-text">A Clan is a self-govering organization
-                            inside
-                            the Guild, that organizes education of players and receives a part of income. Now it’s
-                            really
-                            easy to set up your own guild!</h3>
-                        <h3 class="modal__clans__wrapper-content-right-text">The Guild rents out NFT to the Сlan,
-                            receiving
-                            its part of income. Guild helps with studying and community management.</h3>
-                        <h3 class="modal__clans__wrapper-content-right-text">The Clan Leader pays a fee in MDGG tokens
-                            for
-                            the clan creating and expansion. The fee is completely burned to assue the value of token
-                            (deflationary model).</h3>
-                        <div class="modal3-btn">
-                            <button class="button">Download</button>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
             </div>
         </div>
+    </div>
 
-        <script src="./js/index.js"></script>
+
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
