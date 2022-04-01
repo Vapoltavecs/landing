@@ -8,12 +8,15 @@ const burger = document.querySelector('.burger')
 
 const mobileMenu = document.querySelector('.menu')
 
+const html = document.querySelector('html')
+
 const AddModal = (modalBlock, openBtn) => {
   const closeBtn = modalBlock.querySelector(".close");
   openBtn.addEventListener("click", () => {
     modalBlock.classList.add("active");
     const modal = modalBlock.querySelector(".modal");
     const overlay = modalBlock.querySelector(".overlay");
+    html.classList.add('lock')
 
     toggleOpacityAnim(overlay);
     toggleAnim(modal);
@@ -23,6 +26,7 @@ const AddModal = (modalBlock, openBtn) => {
     toggleAnim(modal, "reverse").addEventListener("finish", () => {
       modalBlock.classList.remove("active");
     });
+    html.classList.remove('lock')
   });
 };
 
