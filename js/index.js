@@ -4,6 +4,10 @@ const modal2 = document.querySelector(".modal2");
 
 const modal3 = document.querySelector(".modal3");
 
+const burger = document.querySelector('.burger')
+
+const mobileMenu = document.querySelector('.menu')
+
 const AddModal = (modalBlock, openBtn) => {
   const closeBtn = modalBlock.querySelector(".close");
   openBtn.addEventListener("click", () => {
@@ -84,3 +88,14 @@ const langWrap = document.querySelectorAll(".languange");
     }
   });
 });
+
+
+burger.addEventListener('click', () => {
+  mobileMenu.classList.add('active')
+})
+
+const closeMenuBtn = mobileMenu.querySelector('.header__close')
+
+closeMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('active')
+})
