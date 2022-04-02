@@ -2256,6 +2256,16 @@ body {
       margin-top: 0;
     }
   }
+  .benefits__scheme{
+    max-width: 800px;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 1500px) {
+  .container{
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -2341,6 +2351,7 @@ body {
     .modal {
       padding-bottom: 40px;
       width: 90%;
+      min-height: unset;
       &__content {
         flex-direction: column;
         & img {
@@ -2411,6 +2422,8 @@ body {
       margin-top: 30px;
     }
   }
+
+ 
 
   .menu {
     box-sizing: border-box;
@@ -2492,6 +2505,7 @@ body {
       }
     }
   }
+  
   .tokenomics {
     margin-top: 60px;
     &__title {
@@ -2585,6 +2599,7 @@ body {
 }
 
 @media (max-width: 1200px) {
+  
   .people {
     background-size: cover;
     &-wrap {
@@ -2620,7 +2635,9 @@ body {
   .modal3 {
     .modal {
       overflow-y: scroll;
-      height: 95vh;
+      height: unset;
+      min-height: unset;
+      padding-bottom: 50px;
     }
   }
   .roadmap {
@@ -2914,6 +2931,17 @@ body {
         margin: 30px 0px;
       }
     }
+  }
+}
+
+@media (max-width: 1375px) {
+  .tokenomics{
+    &__title{
+      font-size: 2em;
+    }
+  }
+  .city{
+    height: 150vh;
   }
 }
 
