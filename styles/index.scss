@@ -62,17 +62,18 @@ body {
 html,
 body {
   overflow-x: hidden;
-  scrollbar-color: #458245 #714826;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(65, 228, 255, 0.6) rgba(50, 50, 50, 0.1);
 }
 
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px; /* ширина для вертикального скролла */
   height: 7px; /* высота для горизонтального скролла */
   background-color: inherit;
 }
 
 /* ползунок скроллбара */
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #1d5e69;
   transition: all 0.3s;
 
@@ -860,23 +861,125 @@ body {
   }
   &__image-wrap {
     position: relative;
+    max-width: 800px;
+    margin: 0 auto;
     &::after {
       content: "";
-      width: 900px;
-      height: 700px;
+      width: 100%;
+      height: 100%;
       position: absolute;
       top: 50%;
 
-      left: 0;
-      margin-top: -230px;
       left: 50%;
-      margin-left: -450px;
+      z-index: 500;
 
-      background: url("../images/tokenomics/coin.png");
-
+      background: url("../images/mdgg.gif");
+      background-size: contain;
       background-repeat: no-repeat;
+      transform: translate(-33%, -47%);
     }
   }
+  &__chart {
+    display: none;
+    margin-top: 40px;
+    .chart__item {
+      margin-top: 40px;
+      &-text {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 102.2%;
+        font-weight: 500;
+      }
+      &-line {
+        margin-top: 10px;
+        border-radius: 20px;
+        width: 100%;
+        height: 5px;
+        background-color: rgba(128, 128, 128, 0.459);
+        position: relative;
+      }
+      &-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+    .item-1 {
+      .chart__item-percent {
+        color: #e128ff;
+      }
+      .chart__item-progress {
+        width: 49%;
+        background-color: #e128ff;
+      }
+    }
+    .item-2 {
+      .chart__item-percent {
+        color: #e128ff;
+      }
+      .chart__item-progress {
+        width: 24%;
+        background-color: #e128ff;
+      }
+    }
+    .item-3 {
+      .chart__item-percent {
+        color: #ffd028;
+      }
+
+      .chart__item-progress {
+        width: 9%;
+        background-color: #ffd028;
+      }
+    }
+    .item-4 {
+      .chart__item-percent {
+        color: #20c0ff;
+      }
+
+      .chart__item-progress {
+        width: 7%;
+        background-color: #20c0ff;
+      }
+    }
+    .item-5 {
+      .chart__item-percent {
+        color: #20c0ff;
+      }
+
+      .chart__item-progress {
+        width: 5%;
+        background-color: #20c0ff;
+      }
+    }
+    .item-6 {
+      .chart__item-percent {
+        color: #5aab28;
+      }
+
+      .chart__item-progress {
+        width: 3%;
+        background-color: #5aab28;
+      }
+    }
+    .item-7 {
+      .chart__item-percent {
+        color: #3042ff;
+      }
+
+      .chart__item-progress {
+        width: 3%;
+        background-color: #3042ff;
+      }
+    }
+  }
+
   &__image {
     width: 100%;
   }
@@ -898,6 +1001,7 @@ body {
     &-item {
       padding: 25px;
       width: 250px;
+      display: block;
       font-weight: 700;
       font-size: 1em;
       line-height: 102.2%;
@@ -931,6 +1035,26 @@ body {
       box-shadow: 0px 9px 26px rgba(64, 136, 224, 0.57),
         inset 0px 4px 13px rgba(255, 255, 255, 0.25);
       border-radius: 12px;
+      transition: all 0.3s;
+      text-decoration: none;
+      &:hover {
+        background: radial-gradient(
+            66.58% 146.41% at -2.19% 16.98%,
+            #14bdff 0,
+            rgba(3, 57, 89, 0) 74.36%
+          ),
+          radial-gradient(
+            80.2% 129.9% at 96.3% 0,
+            #c51bff 0,
+            rgba(3, 57, 89, 0) 100%
+          ),
+          radial-gradient(
+            72.79% 65.22% at 80.51% 92.28%,
+            rgba(68, 220, 255, 0.71) 0,
+            rgba(120, 199, 217, 0) 84.87%
+          ),
+          #82d9ff;
+      }
     }
   }
 }
@@ -1539,6 +1663,8 @@ body {
       font-size: 0.875em;
       line-height: 102.2%;
       margin: 0 16px;
+      display: block;
+      text-decoration: none;
       /* or 14px */
 
       text-align: center;
@@ -1565,6 +1691,22 @@ body {
       color: $white;
     }
   }
+  .nav__contacts {
+    margin-top: 40px;
+    a {
+      display: block;
+      margin: 0 20px;
+      & #gradient {
+        opacity: 0;
+        transition: all 0.3s;
+      }
+      &:hover {
+        & #gradient {
+          opacity: 1;
+        }
+      }
+    }
+  }
 
   .right__nav {
     display: flex;
@@ -1580,6 +1722,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background-color: inherit;
       a {
         display: block;
         margin: 10px;
@@ -1635,7 +1778,7 @@ body {
 
     .close {
       position: absolute;
-      top: -1px;
+      top: 20px;
       right: 20px;
     }
 
@@ -1777,7 +1920,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
     box-shadow: 0px 0px 120px rgba(202, 45, 255, 0.8);
-    height: 900px;
+    height: 95vh;
     max-width: 1350px;
     z-index: 900;
     left: 50%;
@@ -1866,7 +2009,7 @@ body {
       }
       &-text {
         max-width: 880px;
-
+        margin: 0px 30px;
         font-weight: 400;
         font-size: 14px;
         line-height: 130%;
@@ -1934,7 +2077,7 @@ body {
     position: fixed;
     width: 95%;
     max-width: 1325px;
-    min-height: 770px;
+    min-height: 95vh;
     z-index: 500;
     top: 50%;
     left: 50%;
@@ -2196,8 +2339,6 @@ body {
   }
   .modal1 {
     .modal {
-      overflow-y: scroll;
-      
       padding-bottom: 40px;
       width: 90%;
       &__content {
@@ -2208,15 +2349,34 @@ body {
       }
       &__list {
         width: 100%;
+        .text {
+          max-width: 65%;
+          margin-top: 10px;
+        }
+        &-item {
+          margin-top: 20px;
+        }
       }
       &__title {
         font-size: 1.3em;
+        margin: 0 auto;
+        max-width: 80%;
       }
-      & .button{
+      & .button {
         font-size: 1em;
       }
-      .close{
+      &__button {
+        margin-top: 20px;
+      }
+      .close {
         top: 40px;
+      }
+    }
+  }
+  .modal2 {
+    .modal {
+      &-container {
+        max-width: 95%;
       }
     }
   }
@@ -2232,7 +2392,7 @@ body {
       }
     }
 
-    .nav__contacts {
+    &__nav-contacts {
       display: flex;
       margin-top: 70px;
     }
@@ -2443,6 +2603,26 @@ body {
       }
     }
   }
+  .modal2 {
+    .modal {
+      &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        & .card {
+          width: 100%;
+          margin: 0;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+  .modal3 {
+    .modal {
+      overflow-y: scroll;
+      height: 95vh;
+    }
+  }
   .roadmap {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -2553,6 +2733,67 @@ body {
     .container {
       padding: 0;
     }
+  }
+  .modal2 {
+    .modal {
+      &__user {
+        flex-direction: column;
+        &-photo {
+          width: 100%;
+          background-size: cover !important;
+          min-height: 400px;
+        }
+        &-text {
+          margin-top: 40px;
+        }
+        &-2 {
+          flex-direction: column-reverse;
+        }
+      }
+      .button {
+        font-size: 1em;
+      }
+
+      &__title {
+        font-size: 1.5em;
+        margin-top: 50px;
+      }
+      &__cards {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .modal3 {
+    .modal {
+      height: 95vh;
+      overflow-y: scroll;
+      &__content {
+        flex-direction: column;
+        max-width: 90%;
+        margin: 20px auto;
+        &-text {
+          max-width: 100%;
+        }
+      }
+      .button {
+        font-size: 1em;
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+        display: block;
+        padding: 30px 0px;
+      }
+    }
+  }
+
+  .tokenomics__chart {
+    display: block;
+  }
+  .tokenomics__image-wrap::after {
+    transform: translate(-48%, -50%);
+    background-size: cover;
   }
 
   .city {

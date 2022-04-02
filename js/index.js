@@ -4,11 +4,28 @@ const modal2 = document.querySelector(".modal2");
 
 const modal3 = document.querySelector(".modal3");
 
-const burger = document.querySelector('.burger')
+const burger = document.querySelector(".burger");
 
-const mobileMenu = document.querySelector('.menu')
+const mobileMenu = document.querySelector(".menu");
 
-const html = document.querySelector('html')
+const html = document.querySelector("html");
+
+const scrollLinks = document.querySelectorAll('a[href^="#"]');
+
+[...scrollLinks].forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    const selector = e.target.href.slice(e.target.href.indexOf("#") + 1);
+    const blockToScroll = document.querySelector(`#${selector}`) || document.querySelector(`.${selector}`);
+    const toScroll = blockToScroll.getBoundingClientRect().top + scrollY   ;
+    console.log(toScroll)
+    mobileMenu.classList.remove("active");
+    window.scrollTo({
+      top: toScroll,
+      behavior: "smooth",
+    });
+  });
+});
 
 const AddModal = (modalBlock, openBtn) => {
   const closeBtn = modalBlock.querySelector(".close");
@@ -16,7 +33,7 @@ const AddModal = (modalBlock, openBtn) => {
     modalBlock.classList.add("active");
     const modal = modalBlock.querySelector(".modal");
     const overlay = modalBlock.querySelector(".overlay");
-    html.classList.add('lock')
+    html.classList.add("lock");
 
     toggleOpacityAnim(overlay);
     toggleAnim(modal);
@@ -26,7 +43,7 @@ const AddModal = (modalBlock, openBtn) => {
     toggleAnim(modal, "reverse").addEventListener("finish", () => {
       modalBlock.classList.remove("active");
     });
-    html.classList.remove('lock')
+    html.classList.remove("lock");
   });
 };
 
@@ -93,13 +110,12 @@ const langWrap = document.querySelectorAll(".languange");
   });
 });
 
+burger.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
 
-burger.addEventListener('click', () => {
-  mobileMenu.classList.add('active')
-})
+const closeMenuBtn = mobileMenu.querySelector(".header__close");
 
-const closeMenuBtn = mobileMenu.querySelector('.header__close')
-
-closeMenuBtn.addEventListener('click', () => {
-  mobileMenu.classList.remove('active')
-})
+closeMenuBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+});

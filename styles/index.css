@@ -46,10 +46,11 @@ body {
 html,
 body {
   overflow-x: hidden;
-  scrollbar-color: #458245 #714826;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(65, 228, 255, 0.6) rgba(50, 50, 50, 0.1);
 }
 
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
   /* ширина для вертикального скролла */
   height: 7px;
@@ -58,7 +59,7 @@ body {
 }
 
 /* ползунок скроллбара */
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: #1d5e69;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -814,19 +815,109 @@ body {
 }
 .tokenomics__image-wrap {
   position: relative;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .tokenomics__image-wrap::after {
   content: "";
-  width: 900px;
-  height: 700px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
-  left: 0;
-  margin-top: -230px;
   left: 50%;
-  margin-left: -450px;
-  background: url("../images/tokenomics/coin.png");
+  z-index: 500;
+  background: url("../images/mdgg.gif");
+  background-size: contain;
   background-repeat: no-repeat;
+  -webkit-transform: translate(-33%, -47%);
+          transform: translate(-33%, -47%);
+}
+.tokenomics__chart {
+  display: none;
+  margin-top: 40px;
+}
+.tokenomics__chart .chart__item {
+  margin-top: 40px;
+}
+.tokenomics__chart .chart__item-text {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 102.2%;
+  font-weight: 500;
+}
+.tokenomics__chart .chart__item-line {
+  margin-top: 10px;
+  border-radius: 20px;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(128, 128, 128, 0.459);
+  position: relative;
+}
+.tokenomics__chart .chart__item-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 20px;
+}
+.tokenomics__chart .item-1 .chart__item-percent {
+  color: #e128ff;
+}
+.tokenomics__chart .item-1 .chart__item-progress {
+  width: 49%;
+  background-color: #e128ff;
+}
+.tokenomics__chart .item-2 .chart__item-percent {
+  color: #e128ff;
+}
+.tokenomics__chart .item-2 .chart__item-progress {
+  width: 24%;
+  background-color: #e128ff;
+}
+.tokenomics__chart .item-3 .chart__item-percent {
+  color: #ffd028;
+}
+.tokenomics__chart .item-3 .chart__item-progress {
+  width: 9%;
+  background-color: #ffd028;
+}
+.tokenomics__chart .item-4 .chart__item-percent {
+  color: #20c0ff;
+}
+.tokenomics__chart .item-4 .chart__item-progress {
+  width: 7%;
+  background-color: #20c0ff;
+}
+.tokenomics__chart .item-5 .chart__item-percent {
+  color: #20c0ff;
+}
+.tokenomics__chart .item-5 .chart__item-progress {
+  width: 5%;
+  background-color: #20c0ff;
+}
+.tokenomics__chart .item-6 .chart__item-percent {
+  color: #5aab28;
+}
+.tokenomics__chart .item-6 .chart__item-progress {
+  width: 3%;
+  background-color: #5aab28;
+}
+.tokenomics__chart .item-7 .chart__item-percent {
+  color: #3042ff;
+}
+.tokenomics__chart .item-7 .chart__item-progress {
+  width: 3%;
+  background-color: #3042ff;
 }
 .tokenomics__image {
   width: 100%;
@@ -856,6 +947,7 @@ body {
 .tokenomics__buttons-item {
   padding: 25px;
   width: 250px;
+  display: block;
   font-weight: 700;
   font-size: 1em;
   line-height: 102.2%;
@@ -871,6 +963,12 @@ body {
   -webkit-box-shadow: 0px 9px 26px rgba(64, 136, 224, 0.57), inset 0px 4px 13px rgba(255, 255, 255, 0.25);
           box-shadow: 0px 9px 26px rgba(64, 136, 224, 0.57), inset 0px 4px 13px rgba(255, 255, 255, 0.25);
   border-radius: 12px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.tokenomics__buttons-item:hover {
+  background: radial-gradient(66.58% 146.41% at -2.19% 16.98%, #14bdff 0, rgba(3, 57, 89, 0) 74.36%), radial-gradient(80.2% 129.9% at 96.3% 0, #c51bff 0, rgba(3, 57, 89, 0) 100%), radial-gradient(72.79% 65.22% at 80.51% 92.28%, rgba(68, 220, 255, 0.71) 0, rgba(120, 199, 217, 0) 84.87%), #82d9ff;
 }
 
 .chart {
@@ -1480,6 +1578,8 @@ body {
   font-size: 0.875em;
   line-height: 102.2%;
   margin: 0 16px;
+  display: block;
+  text-decoration: none;
   /* or 14px */
   text-align: center;
   letter-spacing: 0.05em;
@@ -1503,6 +1603,21 @@ body {
   text-align: center;
   margin-left: 30px;
   color: #ffffff;
+}
+.footer .nav__contacts {
+  margin-top: 40px;
+}
+.footer .nav__contacts a {
+  display: block;
+  margin: 0 20px;
+}
+.footer .nav__contacts a #gradient {
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.footer .nav__contacts a:hover #gradient {
+  opacity: 1;
 }
 .footer .right__nav {
   display: -webkit-box;
@@ -1535,6 +1650,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: inherit;
 }
 .footer .right__nav-contacts a {
   display: block;
@@ -1596,7 +1712,7 @@ body {
 }
 .modal1 .modal .close {
   position: absolute;
-  top: -1px;
+  top: 20px;
   right: 20px;
 }
 .modal1 .modal__button {
@@ -1703,7 +1819,7 @@ body {
           box-sizing: border-box;
   -webkit-box-shadow: 0px 0px 120px rgba(202, 45, 255, 0.8);
           box-shadow: 0px 0px 120px rgba(202, 45, 255, 0.8);
-  height: 900px;
+  height: 95vh;
   max-width: 1350px;
   z-index: 900;
   left: 50%;
@@ -1808,6 +1924,7 @@ body {
 }
 .modal2 .modal__user-text {
   max-width: 880px;
+  margin: 0px 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
@@ -1865,7 +1982,7 @@ body {
   position: fixed;
   width: 95%;
   max-width: 1325px;
-  min-height: 770px;
+  min-height: 95vh;
   z-index: 500;
   top: 50%;
   left: 50%;
@@ -2151,7 +2268,6 @@ body {
   }
 
   .modal1 .modal {
-    overflow-y: scroll;
     padding-bottom: 40px;
     width: 90%;
   }
@@ -2167,14 +2283,30 @@ body {
   .modal1 .modal__list {
     width: 100%;
   }
+  .modal1 .modal__list .text {
+    max-width: 65%;
+    margin-top: 10px;
+  }
+  .modal1 .modal__list-item {
+    margin-top: 20px;
+  }
   .modal1 .modal__title {
     font-size: 1.3em;
+    margin: 0 auto;
+    max-width: 80%;
   }
   .modal1 .modal .button {
     font-size: 1em;
   }
+  .modal1 .modal__button {
+    margin-top: 20px;
+  }
   .modal1 .modal .close {
     top: 40px;
+  }
+
+  .modal2 .modal-container {
+    max-width: 95%;
   }
 
   .footer {
@@ -2190,7 +2322,7 @@ body {
   .footer__content nav {
     display: block;
   }
-  .footer .nav__contacts {
+  .footer__nav-contacts {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2430,6 +2562,25 @@ body {
     margin: 0;
   }
 
+  .modal2 .modal__cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  .modal2 .modal__cards .card {
+    width: 100%;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .modal3 .modal {
+    overflow-y: scroll;
+    height: 95vh;
+  }
+
   .roadmap {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -2556,6 +2707,73 @@ body {
   }
   .team .container {
     padding: 0;
+  }
+
+  .modal2 .modal__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal2 .modal__user-photo {
+    width: 100%;
+    background-size: cover !important;
+    min-height: 400px;
+  }
+  .modal2 .modal__user-text {
+    margin-top: 40px;
+  }
+  .modal2 .modal__user-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .modal2 .modal .button {
+    font-size: 1em;
+  }
+  .modal2 .modal__title {
+    font-size: 1.5em;
+    margin-top: 50px;
+  }
+  .modal2 .modal__cards {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  .modal3 .modal {
+    height: 95vh;
+    overflow-y: scroll;
+  }
+  .modal3 .modal__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 90%;
+    margin: 20px auto;
+  }
+  .modal3 .modal__content-text {
+    max-width: 100%;
+  }
+  .modal3 .modal .button {
+    font-size: 1em;
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    display: block;
+    padding: 30px 0px;
+  }
+
+  .tokenomics__chart {
+    display: block;
+  }
+
+  .tokenomics__image-wrap::after {
+    -webkit-transform: translate(-48%, -50%);
+            transform: translate(-48%, -50%);
+    background-size: cover;
   }
 
   .city .item-4 {
