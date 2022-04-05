@@ -240,8 +240,8 @@ body {
   box-sizing: border-box;
   background-image: url("../images/promo/bg.png");
   position: relative;
-  height: 100vh;
-    min-height: 800px;
+
+  min-height: 800px;
 
   text-align: center;
   background-position: center center;
@@ -2276,6 +2276,7 @@ body {
 
 .close {
   cursor: pointer;
+  z-index: 900;
 }
 
 @keyframes hoverButton {
@@ -2373,12 +2374,11 @@ body {
   }
 }
 
-
 @media (max-width: 1500px) {
   .container {
     padding: 0 20px;
   }
-  .header{
+  .header {
     padding: 5px;
   }
 }
@@ -2568,7 +2568,6 @@ body {
     display: flex;
   }
   .promo {
-    
     margin-top: 0;
     &__title {
       font-size: 2em;

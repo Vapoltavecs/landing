@@ -233,7 +233,6 @@ body {
           box-sizing: border-box;
   background-image: url("../images/promo/bg.png");
   position: relative;
-  height: 100vh;
   min-height: 800px;
   text-align: center;
   background-position: center center;
@@ -2159,6 +2158,7 @@ body {
 
 .close {
   cursor: pointer;
+  z-index: 900;
 }
 
 @-webkit-keyframes hoverButton {
