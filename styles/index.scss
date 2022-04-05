@@ -2310,6 +2310,7 @@ body {
   }
   &__list {
     opacity: 0;
+    z-index: 700;
     display: none;
     background: linear-gradient(180deg, #20c0ff 0, #fb3fff 100%), #c4c4c4;
     border-radius: 8px;
@@ -2328,6 +2329,7 @@ body {
     }
     &.active {
       display: block;
+      opacity: 1;
     }
   }
   .change-lang {
@@ -2369,15 +2371,20 @@ body {
   }
 }
 
+
 @media (max-width: 1500px) {
   .container {
     padding: 0 20px;
+  }
+  .header{
+    padding: 5px;
   }
 }
 
 @media (max-width: 1400px) {
   .header {
     height: 142px;
+    padding: 20px;
     .burger {
       display: flex;
       flex-direction: column;
@@ -2559,7 +2566,8 @@ body {
     display: flex;
   }
   .promo {
-    min-height: calc(100vh - 110px);
+    height: 100vh;
+    min-height: 800px;
     margin-top: 0;
     &__title {
       font-size: 2em;

@@ -2211,6 +2211,7 @@ body {
 }
 .languange__list {
   opacity: 0;
+  z-index: 700;
   display: none;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #20c0ff), to(#fb3fff)), #c4c4c4;
   background: linear-gradient(180deg, #20c0ff 0, #fb3fff 100%), #c4c4c4;
@@ -2232,6 +2233,7 @@ body {
 }
 .languange__list.active {
   display: block;
+  opacity: 1;
 }
 .languange .change-lang {
   display: -webkit-box;
@@ -2279,10 +2281,15 @@ body {
   .container {
     padding: 0 20px;
   }
+
+  .header {
+    padding: 5px;
+  }
 }
 @media (max-width: 1400px) {
   .header {
     height: 142px;
+    padding: 20px;
   }
   .header .burger {
     display: -webkit-box;
@@ -2492,7 +2499,8 @@ body {
   }
 
   .promo {
-    min-height: calc(100vh - 110px);
+    height: 100vh;
+    min-height: 800px;
     margin-top: 0;
   }
   .promo__title {
