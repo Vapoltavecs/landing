@@ -233,6 +233,8 @@ body {
           box-sizing: border-box;
   background-image: url("../images/promo/bg.png");
   position: relative;
+  height: 100vh;
+  min-height: 800px;
   text-align: center;
   background-position: center center;
 }
@@ -2499,8 +2501,6 @@ body {
   }
 
   .promo {
-    height: 100vh;
-    min-height: 800px;
     margin-top: 0;
   }
   .promo__title {
