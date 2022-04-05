@@ -157,13 +157,20 @@ body {
 }
 
 .header {
-  font-size: calc(10px + (2 + 2 * 0.25) * ((100vw - 375px) / 1550));
+  font-size: 14px;
+  font-weight: 500;
+  height: 170px;
+
+  font-family: "Gotham Pro";
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 80px 30px;
+  padding: calc(50px + (5 + 40 * 0.25) * ((100vw - 375px) / 1920))
+    calc(10px + (55 + 55 * 0.25) * ((100vw - 375px) / 1920))
+    calc(50px + (5 + 50 * 0.25) * ((100vw - 375px) / 1920))
+    calc(10px + (55 + 55 * 0.25) * ((100vw - 375px) / 1920));
   box-sizing: border-box;
   border-bottom: 1px solid rgba($color: $white, $alpha: 0.3);
 
@@ -174,7 +181,7 @@ body {
     &-item {
       margin-left: calc(10px + (10 + 10 * 0.25) * ((100vw - 1401px) / 1550));
       color: $white;
-      font-weight: 400;
+      font-size: calc(12px + (2 + 2 * 0.25) * ((100vw - 375px) / 1550));
       text-transform: uppercase;
       text-decoration: none;
 
@@ -222,7 +229,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: calc(170px + (67 + 67 * 0.25) * ((100vw - 375px) / 1920));
+    max-width: calc(170px + (67 + 67 * 0.25) * ((100vw - 375px) / 1920));
     transform: translate(-60%, -50%);
     min-width: 170px;
   }
@@ -231,7 +238,8 @@ body {
 .promo {
   height: calc(100vh - 170px);
   box-sizing: border-box;
-  background-image: url("../images/bg-1.png");
+  background-image: url("../images/promo/bg.png");
+  position: relative;
 
   text-align: center;
   background-position: center center;
@@ -244,6 +252,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
   }
+
   &__subtitle {
     letter-spacing: 0.05em;
     text-align: center;
@@ -357,6 +366,39 @@ body {
     }
     &-text {
       margin-left: 20px;
+    }
+  }
+  .bg {
+    .left {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      width: 480px;
+      margin-top: -230px;
+      animation: planet 150s alternate infinite forwards;
+      margin-left: -270px;
+    }
+    .right {
+      position: absolute;
+      top: 60%;
+      right: 0;
+      width: 480px;
+      margin-top: -230px;
+      animation: planet 100s ease-in-out reverse infinite forwards;
+
+      margin-right: -270px;
+    }
+    .center {
+      bottom: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      & img {
+        width: auto;
+      }
+    }
+    & img {
+      width: 100%;
     }
   }
 }
@@ -1703,6 +1745,7 @@ body {
 .footer {
   position: relative;
   padding: 70px 50px 110px;
+  overflow-y: hidden;
   &__content {
     display: flex;
     align-items: center;
@@ -2249,7 +2292,12 @@ body {
   position: relative;
   margin-right: 14px;
   &-icon {
+    transition: all 0.6s;
+    height: 7px;
     cursor: pointer;
+    &.active {
+      transform: rotate(180deg);
+    }
   }
   &-lang {
     cursor: pointer;
@@ -2329,7 +2377,7 @@ body {
 
 @media (max-width: 1400px) {
   .header {
-    padding: 40px;
+    height: 142px;
     .burger {
       display: flex;
       flex-direction: column;
@@ -2767,6 +2815,12 @@ body {
       justify-content: start;
     }
   }
+  .promo {
+    .left,
+    .right {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 850px) {
@@ -3037,5 +3091,14 @@ body {
   }
   100% {
     transform: translateY(20%);
+  }
+}
+
+@keyframes planet {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

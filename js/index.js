@@ -1,13 +1,10 @@
 const modal1 = document.querySelector(".modal1");
-
 const modal2 = document.querySelector(".modal2");
-
 const modal3 = document.querySelector(".modal3");
 
 const burger = document.querySelector(".burger");
 
 const mobileMenu = document.querySelector(".menu");
-
 const html = document.querySelector("html");
 
 const scrollLinks = document.querySelectorAll('a[href^="#"]');
@@ -16,9 +13,11 @@ const scrollLinks = document.querySelectorAll('a[href^="#"]');
   el.addEventListener("click", (e) => {
     e.preventDefault();
     const selector = e.target.href.slice(e.target.href.indexOf("#") + 1);
-    const blockToScroll = document.querySelector(`#${selector}`) || document.querySelector(`.${selector}`);
-    const toScroll = blockToScroll.getBoundingClientRect().top + scrollY   ;
-    console.log(toScroll)
+    const blockToScroll =
+      document.querySelector(`#${selector}`) ||
+      document.querySelector(`.${selector}`);
+    const toScroll = blockToScroll.getBoundingClientRect().top + scrollY;
+    console.log(toScroll);
     mobileMenu.classList.remove("active");
     window.scrollTo({
       top: toScroll,
@@ -82,15 +81,18 @@ const langWrap = document.querySelectorAll(".languange");
 [...langWrap].forEach((el) => {
   const lang = el.querySelector(".change-lang");
   const menu = el.querySelector(".languange__list");
+  const arrow = lang.querySelector(".languange-icon");
 
   lang.addEventListener("click", () => {
     menu.classList.add("active");
+    arrow.classList.add("active");
     toggleOpacityAnim(menu);
   });
 
   menu.addEventListener("click", ({ target }) => {
     if (target.classList.contains("languange__list-item")) {
       langDiv.forEach((el) => (el.innerText = target.innerText));
+      arrow.classList.remove("active");
       toggleOpacityAnim(menu, "reverse").addEventListener("finish", () => {
         menu.classList.remove("active");
       });
@@ -103,6 +105,7 @@ const langWrap = document.querySelectorAll(".languange");
       !target.classList.contains("languange-icon") &&
       !target.classList.contains("languange-lang")
     ) {
+      arrow.classList.remove("active");
       toggleOpacityAnim(menu, "reverse").addEventListener("finish", () => {
         menu.classList.remove("active");
       });
@@ -120,5 +123,4 @@ closeMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
 });
 
-
-new WOW().init()
+new WOW().init();
