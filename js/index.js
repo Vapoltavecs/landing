@@ -119,3 +119,6 @@ const closeMenuBtn = mobileMenu.querySelector(".header__close");
 closeMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
 });
+
+
+new WOW().init()

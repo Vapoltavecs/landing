@@ -799,16 +799,24 @@ body {
     }
   }
   &__card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      transition: all 1s;
+    }
+
     min-height: 180px;
     background: url("../images/benefits/bg-card.png");
     background-size: cover;
     min-width: 400px;
     position: relative;
     margin-left: -7px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    z-index: 500;
     &-title {
       max-width: 170px;
       text-align: center;
@@ -824,6 +832,53 @@ body {
       display: block;
 
       padding-bottom: 10px;
+      height: 100%;
+    }
+    &-info {
+      transition: all 1s;
+      position: absolute;
+
+      bottom: 20px;
+      color: $white;
+      font-size: 14px;
+      width: 100%;
+      left: 50%;
+      transform: translateY(300%) translateX(-50%);
+      text-align: center;
+      margin: 0 auto;
+    }
+    .angle {
+      opacity: 1;
+      transition: all 0.3s;
+    }
+    &:hover {
+      background: radial-gradient(
+          243.28% 101.19% at 42.43% 105.46%,
+          #00277a 0,
+          rgba(3, 57, 89, 0) 74.36%
+        ),
+        radial-gradient(
+          66.58% 146.41% at -2.19% 16.98%,
+          #20c0ff 0,
+          rgba(3, 57, 89, 0) 74.36%
+        ),
+        radial-gradient(
+          80.2% 129.9% at 96.3% 0,
+          #ca2dff 0,
+          rgba(3, 57, 89, 0) 100%
+        ),
+        #140359;
+      transform: scale(1.1);
+      .wrap {
+        transform: translateY(-30px) scale(0.8);
+      }
+
+      .benefits__card-info {
+        transform: translateY(0%) translateX(-50%);
+      }
+      .angle {
+        opacity: 0;
+      }
     }
   }
   &__button {
@@ -861,7 +916,7 @@ body {
   }
   &__image-wrap {
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     &::after {
       content: "";
@@ -1035,9 +1090,11 @@ body {
       box-shadow: 0px 9px 26px rgba(64, 136, 224, 0.57),
         inset 0px 4px 13px rgba(255, 255, 255, 0.25);
       border-radius: 12px;
-      transition: all 0.3s;
+      transition: all 1s;
       text-decoration: none;
+      cursor: pointer;
       &:hover {
+        transform: scale(1.1);
         background: radial-gradient(
             66.58% 146.41% at -2.19% 16.98%,
             #14bdff 0,
@@ -1062,6 +1119,7 @@ body {
 .chart {
   margin-top: 170px;
   background: url("../images/chart/bg.png") center center;
+  background-size: cover;
   border-bottom: 1px solid $white;
   &__title {
     font-weight: 300;
@@ -1181,7 +1239,7 @@ body {
   padding: 120px 0px;
   background: url("../images/people/bg.png");
   border-bottom: 1px solid rgba($color: $white, $alpha: 0.3);
-
+  background-size: cover;
   &-wrap {
     display: flex;
 
@@ -1439,6 +1497,7 @@ body {
       background-size: cover;
       padding-top: 35px;
       text-align: center;
+      min-width: 200px;
       &-list {
         display: block;
         width: 100%;
@@ -2256,14 +2315,14 @@ body {
       margin-top: 0;
     }
   }
-  .benefits__scheme{
+  .benefits__scheme {
     max-width: 800px;
     margin: 30px auto;
   }
 }
 
 @media (max-width: 1500px) {
-  .container{
+  .container {
     padding: 0 20px;
   }
 }
@@ -2423,8 +2482,6 @@ body {
     }
   }
 
- 
-
   .menu {
     box-sizing: border-box;
     display: flex;
@@ -2505,7 +2562,7 @@ body {
       }
     }
   }
-  
+
   .tokenomics {
     margin-top: 60px;
     &__title {
@@ -2588,9 +2645,9 @@ body {
       font-size: 3em;
     }
     &__cards {
-      overflow-x: scroll;
+      flex-wrap: wrap;
+      justify-content: center;
       display: flex;
-      padding-bottom: 10px;
     }
     &__card {
       min-width: 320px;
@@ -2599,7 +2656,6 @@ body {
 }
 
 @media (max-width: 1200px) {
-  
   .people {
     background-size: cover;
     &-wrap {
@@ -2651,7 +2707,10 @@ body {
       overflow-x: scroll;
       justify-content: space-between;
       &__item {
-        min-width: 270px;
+        padding: calc(40px + (30 + 30 * 0.25) * ((100vw - 375px) / 1920))
+          calc(15px + (40 + 40 * 0.25) * ((100vw - 375px) / 1920))
+          calc(30px + (15 + 15 * 0.25) * ((100vw - 375px) / 1920))
+          calc(15px + (40 + 40 * 0.25) * ((100vw - 375px) / 1920));
       }
     }
   }
@@ -2698,6 +2757,14 @@ body {
       margin-left: 20px;
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+  .mass {
+    &__cards {
+      overflow-x: scroll;
+      padding-bottom: 10px;
+      flex-wrap: nowrap;
+      justify-content: start;
     }
   }
 }
@@ -2838,6 +2905,9 @@ body {
         min-width: 95%;
         box-sizing: border-box;
         margin: 10px;
+        &:hover {
+          transform: scale(1);
+        }
       }
     }
   }
@@ -2845,19 +2915,20 @@ body {
   .partners {
     &__card {
       width: 100%;
-      min-width: 100%;
-      & img {
-        width: 100%;
-      }
+      min-width: 85%;
+      padding: 50px;
       &:first-child {
         margin: 0;
+      }
+      & img {
+        width: 100%;
       }
     }
   }
   .mass {
     &__card {
       width: 100%;
-      min-width: 100%;
+      min-width: 85%;
     }
   }
 
@@ -2935,12 +3006,12 @@ body {
 }
 
 @media (max-width: 1375px) {
-  .tokenomics{
-    &__title{
+  .tokenomics {
+    &__title {
       font-size: 2em;
     }
   }
-  .city{
+  .city {
     height: 150vh;
   }
 }

@@ -755,6 +755,19 @@ body {
   color: #ffffff;
 }
 .benefits__card {
+  min-height: 180px;
+  background: url("../images/benefits/bg-card.png");
+  background-size: cover;
+  min-width: 400px;
+  position: relative;
+  margin-left: -7px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  z-index: 500;
+}
+.benefits__card .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -766,12 +779,8 @@ body {
           justify-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 180px;
-  background: url("../images/benefits/bg-card.png");
-  background-size: cover;
-  min-width: 400px;
-  position: relative;
-  margin-left: -7px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 .benefits__card-title {
   max-width: 170px;
@@ -787,6 +796,42 @@ body {
   margin-right: 40px;
   display: block;
   padding-bottom: 10px;
+  height: 100%;
+}
+.benefits__card-info {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: absolute;
+  bottom: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateY(300%) translateX(-50%);
+          transform: translateY(300%) translateX(-50%);
+  text-align: center;
+  margin: 0 auto;
+}
+.benefits__card .angle {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.benefits__card:hover {
+  background: radial-gradient(243.28% 101.19% at 42.43% 105.46%, #00277a 0, rgba(3, 57, 89, 0) 74.36%), radial-gradient(66.58% 146.41% at -2.19% 16.98%, #20c0ff 0, rgba(3, 57, 89, 0) 74.36%), radial-gradient(80.2% 129.9% at 96.3% 0, #ca2dff 0, rgba(3, 57, 89, 0) 100%), #140359;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.benefits__card:hover .wrap {
+  -webkit-transform: translateY(-30px) scale(0.8);
+          transform: translateY(-30px) scale(0.8);
+}
+.benefits__card:hover .benefits__card-info {
+  -webkit-transform: translateY(0%) translateX(-50%);
+          transform: translateY(0%) translateX(-50%);
+}
+.benefits__card:hover .angle {
+  opacity: 0;
 }
 .benefits__button {
   margin: 140px auto 0;
@@ -815,7 +860,7 @@ body {
 }
 .tokenomics__image-wrap {
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .tokenomics__image-wrap::after {
@@ -963,17 +1008,21 @@ body {
   -webkit-box-shadow: 0px 9px 26px rgba(64, 136, 224, 0.57), inset 0px 4px 13px rgba(255, 255, 255, 0.25);
           box-shadow: 0px 9px 26px rgba(64, 136, 224, 0.57), inset 0px 4px 13px rgba(255, 255, 255, 0.25);
   border-radius: 12px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   text-decoration: none;
+  cursor: pointer;
 }
 .tokenomics__buttons-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background: radial-gradient(66.58% 146.41% at -2.19% 16.98%, #14bdff 0, rgba(3, 57, 89, 0) 74.36%), radial-gradient(80.2% 129.9% at 96.3% 0, #c51bff 0, rgba(3, 57, 89, 0) 100%), radial-gradient(72.79% 65.22% at 80.51% 92.28%, rgba(68, 220, 255, 0.71) 0, rgba(120, 199, 217, 0) 84.87%), #82d9ff;
 }
 
 .chart {
   margin-top: 170px;
   background: url("../images/chart/bg.png") center center;
+  background-size: cover;
   border-bottom: 1px solid #ffffff;
 }
 .chart__title {
@@ -1096,6 +1145,7 @@ body {
   padding: 120px 0px;
   background: url("../images/people/bg.png");
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-size: cover;
 }
 .people-wrap {
   display: -webkit-box;
@@ -1344,6 +1394,7 @@ body {
   background-size: cover;
   padding-top: 35px;
   text-align: center;
+  min-width: 200px;
 }
 .roadmap .cards__item-list {
   display: block;
@@ -2543,11 +2594,14 @@ body {
     font-size: 3em;
   }
   .mass__cards {
-    overflow-x: scroll;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-bottom: 10px;
   }
   .mass__card {
     min-width: 320px;
@@ -2609,7 +2663,7 @@ body {
             justify-content: space-between;
   }
   .roadmap .cards__item {
-    min-width: 270px;
+    padding: calc(40px + (30 + 30 * 0.25) * ((100vw - 375px) / 1920)) calc(15px + (40 + 40 * 0.25) * ((100vw - 375px) / 1920)) calc(30px + (15 + 15 * 0.25) * ((100vw - 375px) / 1920)) calc(15px + (40 + 40 * 0.25) * ((100vw - 375px) / 1920));
   }
 }
 @media (max-width: 1100px) {
@@ -2670,6 +2724,16 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+
+  .mass__cards {
+    overflow-x: scroll;
+    padding-bottom: 10px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 @media (max-width: 850px) {
@@ -2812,21 +2876,26 @@ body {
             box-sizing: border-box;
     margin: 10px;
   }
+  .tokenomics__buttons-item:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 
   .partners__card {
     width: 100%;
-    min-width: 100%;
-  }
-  .partners__card img {
-    width: 100%;
+    min-width: 85%;
+    padding: 50px;
   }
   .partners__card:first-child {
     margin: 0;
   }
+  .partners__card img {
+    width: 100%;
+  }
 
   .mass__card {
     width: 100%;
-    min-width: 100%;
+    min-width: 85%;
   }
 
   .units .cards__item {

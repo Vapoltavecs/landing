@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Document</title>
 
 </head>
@@ -13,7 +14,7 @@
 <body>
 
     <div class="menu">
-        <nav class="header__nav">
+        <nav class="header__nav ">
             <a class="link js-connect-wallet" href="#">CONNECT WALLET</a>
             <br>
             <a href="https://docs.metadao.gg/" target="_blank">WHITEPAPER</a>
@@ -106,7 +107,7 @@
         </div>
         <img src="./images/icons/close.png" alt="" class="header__close">
     </div>
-    <header class="header">
+    <header class="header ">
         <div class="burger">
             <div></div>
             <div></div>
@@ -134,7 +135,7 @@
         <nav class="header__menu">
             <a href="https://docs.metadao.gg/" class="header__menu-item" target="_blank">WHITEPAPER</a>
             <a class="header__menu-item" href="#units">scoolarship</a>
-            
+
             <a href="#chart" class="header__menu-item">Meta rent</a>
             <a href="#units" class="header__menu-item">Clan system</a>
             <a href="#tokenomics" class="header__menu-item">mogg token</a>
@@ -186,43 +187,49 @@
         <img src="./images/marqee.png" alt="marqee" class="marqee-item">
         <img src="./images/marqee.png" alt="marqee" class="marqee-item">
     </div>
-    <section class="sale">
+
+    <section class="sale   ">
         <div class="container">
             <div>
                 <div class="sale__title">TOKEN SALE</div>
                 <div class="sale__subtitle">Не упусти возможность стать частью ключевой геймфай экосистемы</div>
             </div>
-            <div class="sale-wrapper">
+            <div class="sale-wrapper ">
                 <div class="sale__charts">
-                    <div class="sale__charts-item charts__item">
+                    <div class="sale__charts-item wow charts__item animate__animated animate__fadeInRight"
+                        data-wow-delay="0.3s">
                         <div class="charts__item-title">Price, USDT: 0.02</div>
                         <img src="./images/charts/1.jpg" class="charts__item-chart">
                         <div class="charts__item-group">seek round</div>
                         <div class="charts__item-offer">Tokens offer</div>
                         <div class="charts__item-sale">25 000 000</div>
                     </div>
-                    <div class="sale__charts-item charts__item">
+                    <div class="sale__charts-item wow charts__item animate__animated animate__fadeInRight"
+                        data-wow-delay="0.6s">
                         <div class="charts__item-title">Price, USDT: 0.048</div>
                         <img src="./images/charts/2.jpg" class="charts__item-chart">
                         <div class="charts__item-group">Private sale</div>
                         <div class="charts__item-offer">Tokens offer</div>
                         <div class="charts__item-sale">50 000 000</div>
                     </div>
-                    <div class="sale__charts-item charts__item">
+                    <div class="sale__charts-item wow charts__item animate__animated animate__fadeInRight"
+                        data-wow-delay="0.9s">
                         <div class="charts__item-title">Price, USDT: 0.067</div>
                         <img src="./images/charts/3.jpg" class="charts__item-chart">
                         <div class="charts__item-group">Public sale</div>
                         <div class="charts__item-offer">Tokens offer</div>
                         <div class="charts__item-sale">45 000 000</div>
                     </div>
-                    <div class="sale__charts-item charts__item">
+                    <div class="sale__charts-item wow charts__item animate__animated animate__fadeInRight"
+                        data-wow-delay="1.2s">
                         <div class="charts__item-title">Price, USDT: 0.1</div>
                         <img src="./images/charts/4.jpg" class="charts__item-chart">
                         <div class="charts__item-group">Launchpad sale</div>
                         <div class="charts__item-offer">Tokens offer</div>
                         <div class="charts__item-sale">5 000 000</div>
                     </div>
-                    <div class="sale__charts-item charts__item">
+                    <div class="sale__charts-item wow charts__item animate__animated animate__fadeInRight"
+                        data-wow-delay="1.5s">
                         <div class="charts__item-title">Price, USDT: 0.02 - 0.067</div>
                         <img src="./images/charts/5.jpg" class="charts__item-chart">
                         <div class="charts__item-group">Fund special
@@ -265,17 +272,19 @@
         <div class="units__subtitle">our units</div>
         <div class="container">
             <div class="units__cards">
-                <div class="units__cards-item cards__item open-modal-1">
+                <div class="units__cards-item cards__item open-modal-1 wow animate__animated animate__fadeInRight">
                     <div class="cards__item-title">Meta Rent</div>
                     <div class="effect"></div>
                     <img src="./images/units/1.png" alt="scheme" class="cards__item-sheme">
                 </div>
-                <div class="units__cards-item cards__item open-modal-2">
+                <div class="units__cards-item cards__item open-modal-2 wow animate__animated animate__fadeInRight"
+                    data-wow-delay="0.3s">
                     <div class="cards__item-title">Scholarship</div>
                     <div class="effect"></div>
                     <img src="./images/units/2.png" alt="scheme" class="cards__item-sheme">
                 </div>
-                <div class="units__cards-item cards__item open-modal-3">
+                <div class="units__cards-item cards__item open-modal-3 wow animate__animated animate__fadeInRight"
+                    data-wow-delay="0.6s">
                     <div class="cards__item-title ">Clan</div>
                     <div class="effect"></div>
                     <div class="scheme-wrap">
@@ -295,29 +304,38 @@
             <div class="benefits__scheme">
                 <div class="benefits__scheme-item benefits__top">
                     <div class="benefits__top-text">Владелец NFT депонирует сумму для гарантии оплаты игроку</div>
-                    <div class="benefits__top-card benefits__card">
-                        <div class="benefits__card-title">Smart Contract</div>
-                        <img class="benefits__card-img" src="./images/benefits/1-card.png">
+                    <div class="benefits__top-card benefits__card wow animate__animated animate__fadeInRight">
+                        <div class="wrap">
+                            <div class="benefits__card-title">Smart Contract</div>
+                            <img class="benefits__card-img" src="./images/benefits/1-card.png">
+                        </div>
                         <div class="angle">
                             <div class="angle-item angle-item-tl"></div>
                             <div class="angle-item angle-item-tr"></div>
                             <div class="angle-item angle-item-bl"></div>
                             <div class="angle-item angle-item-br"></div>
                         </div>
+                        <p class="benefits__card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quibusdam, ut.</p>
                     </div>
 
                     <div class="benefits__top-text">Гильдия отбирает и готовит игроков</div>
                 </div>
                 <div class="benefits__scheme-item benefits__middle">
-                    <div class="benefits__middle-card benefits__card">
-                        <div class="benefits__card-title">Burning</div>
-                        <img class="benefits__card-img" src="./images/benefits/2-card.png">
+                    <div class="benefits__middle-card benefits__card wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
+                        <div class="wrap">
+                            <div class="benefits__card-title">Burning</div>
+                            <img class="benefits__card-img" src="./images/benefits/2-card.png">
+
+                        </div>
                         <div class="angle">
                             <div class="angle-item angle-item-tl"></div>
                             <div class="angle-item angle-item-tr"></div>
                             <div class="angle-item angle-item-bl"></div>
                             <div class="angle-item angle-item-br"></div>
                         </div>
+                        <p class="benefits__card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quibusdam, ut.</p>
                     </div>
                     <div>
                         <div class="benefits__middle-title ">Арендодатель может выбрать лучшего
@@ -326,29 +344,37 @@
                             без вложений. Доход от игры делится с арендодателем.</div>
 
                     </div>
-                    <div class="benefits__middle-card benefits__card">
-                        <div class="benefits__card-title">Utility</div>
-                        <img class="benefits__card-img" src="./images/benefits/3-card.png">
+                    <div class="benefits__middle-card benefits__card wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
+                        <div class="wrap">
+                            <div class="benefits__card-title">Utility</div>
+                            <img class="benefits__card-img" src="./images/benefits/3-card.png">
+                        </div>
                         <div class="angle">
                             <div class="angle-item angle-item-tl"></div>
                             <div class="angle-item angle-item-tr"></div>
                             <div class="angle-item angle-item-bl"></div>
                             <div class="angle-item angle-item-br"></div>
                         </div>
+                        <p class="benefits__card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quibusdam, ut.</p>
                     </div>
                 </div>
                 <div class="benefits__scheme-item benefits__bottom">
                     <div class="benefits__bottom-text">Арендодатель может выбрать лучшего свободного игрока. Приоритет
                         имеют те, кто холдит больше MDGG</div>
-                    <div class="benefits__bottom-card benefits__card">
-                        <div class="benefits__card-title">Vesting</div>
-                        <img class="benefits__card-img" src="./images/benefits/4-card.png">
+                    <div class="benefits__bottom-card benefits__card wow animate__animated animate__fadeInRight" data-wow-delay="0.9s">
+                        <div class="wrap">
+                            <div class="benefits__card-title">Vesting</div>
+                            <img class="benefits__card-img" src="./images/benefits/4-card.png">
+                        </div>
                         <div class="angle">
                             <div class="angle-item angle-item-tl"></div>
                             <div class="angle-item angle-item-tr"></div>
                             <div class="angle-item angle-item-bl"></div>
                             <div class="angle-item angle-item-br"></div>
                         </div>
+                        <p class="benefits__card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quibusdam, ut.</p>
                     </div>
 
                     <div class="benefits__bottom-text">Каждый игрок имеет рейтинг в Гильдии</div>
@@ -796,7 +822,7 @@
         <div class="container">
             <div class="roadmap__title">roadmap</div>
             <div class="cards">
-                <div class="cards__item">
+                <div class="cards__item wow animate__animated animate__fadeInRight">
                     <div class="cards__item-title">Q1 2022</div>
                     <div class="angle">
                         <div class="angle-item angle-item-tl"></div>
@@ -814,7 +840,7 @@
                         <li>Community Quest</li>
                     </ul>
                 </div>
-                <div class="cards__item">
+                <div class="cards__item wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
                     <div class="cards__item-title">Q1 2022</div>
                     <div class="angle">
                         <div class="angle-item angle-item-tl"></div>
@@ -829,7 +855,7 @@
                         <li> Merch distribution</li>
                     </ul>
                 </div>
-                <div class="cards__item">
+                <div class="cards__item wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
                     <div class="cards__item-title">Q1 2022</div>
                     <div class="angle">
                         <div class="angle-item angle-item-tl"></div>
@@ -844,7 +870,7 @@
                         <li>Clans launch</li>
                     </ul>
                 </div>
-                <div class="cards__item">
+                <div class="cards__item wow animate__animated animate__fadeInRight" data-wow-delay="0.9s">
                     <div class="cards__item-title">Q1 2022</div>
                     <div class="angle">
                         <div class="angle-item angle-item-tl"></div>
@@ -858,7 +884,7 @@
                         <li> Launch of the wallet</li>
                     </ul>
                 </div>
-                <div class="cards__item">
+                <div class="cards__item wow animate__animated animate__fadeInRight" data-wow-delay="1.2s">
                     <div class="cards__item-title">Q1 2022</div>
                     <div class="angle">
                         <div class="angle-item angle-item-tl"></div>
@@ -1179,8 +1205,11 @@
         </div>
     </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/index.js"></script>
+
 </body>
 
 </html>
