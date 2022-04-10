@@ -138,6 +138,32 @@ body {
   transition: all 0.3s;
 }
 
+.title {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 102.2%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.colored__title {
+  font-weight: 300;
+  font-size: 6em;
+  line-height: 102.2%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%), #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .header {
   font-size: 14px;
   font-weight: 500;
@@ -238,13 +264,7 @@ body {
   background-position: center center;
 }
 .promo__title {
-  letter-spacing: 0.05em;
-  text-align: center;
   padding-top: 70px;
-  color: #ffffff;
-  font-size: 3.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 .promo__subtitle {
   letter-spacing: 0.05em;
@@ -445,16 +465,6 @@ body {
       justify-content: space-around;
   color: white;
 }
-.sale__title {
-  font-size: 4.688em;
-  color: #ffffff;
-  text-align: center;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  font-style: normal;
-  text-transform: uppercase;
-  line-height: 102.2%;
-}
 .sale__subtitle {
   color: #c4c4c4;
   font-weight: 300;
@@ -570,14 +580,6 @@ body {
   background-size: cover;
   color: #ffffff;
 }
-.units__title {
-  font-weight: 400;
-  font-size: 4.688em;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 102.2%;
-}
 .units__subtitle {
   color: #c4c4c4;
   text-transform: uppercase;
@@ -687,14 +689,6 @@ body {
   width: 100%;
   text-align: center;
   background: url("../images/benefits/bg-benefits.png") center center;
-}
-.benefits__title {
-  text-align: center;
-  font-size: 4.688em;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: 400;
-  letter-spacing: 0.05em;
 }
 .benefits__subtitle {
   margin-top: 30px;
@@ -882,17 +876,6 @@ body {
   width: 100%;
 }
 .tokenomics__title {
-  font-weight: 300;
-  font-size: 6em;
-  line-height: 102.2%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%), #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
   margin-bottom: 200px;
 }
 .tokenomics__image-wrap {
@@ -1061,19 +1044,6 @@ body {
   background: url("../images/chart/bg.png") center center;
   background-size: cover;
   border-bottom: 1px solid #ffffff;
-}
-.chart__title {
-  font-weight: 300;
-  font-size: 6em;
-  line-height: 102.2%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%), #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
 .chart__colors {
   display: -webkit-box;
@@ -1287,19 +1257,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.team__title {
-  font-weight: 300;
-  font-size: 6em;
-  line-height: 102.2%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%), #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
 .team__card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1395,19 +1352,6 @@ body {
   padding-bottom: 290px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.roadmap__title {
-  font-weight: 400;
-  font-size: 6em;
-  line-height: 102.2%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
 .roadmap .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1471,19 +1415,7 @@ body {
 }
 
 .partners__title {
-  font-weight: 300;
-  font-size: 6em;
-  padding-top: 200px;
-  line-height: 102.2%;
-  /* or 98px */
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%), #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  margin-top: 100px;
 }
 .partners__cards {
   display: -webkit-box;
@@ -1515,21 +1447,7 @@ body {
 }
 
 .mass {
-  margin-top: 160px;
-}
-.mass__title {
-  font-weight: 300;
-  font-size: 6em;
-  line-height: 102.2%;
-  /* or 98px */
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%), #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  margin-top: 200px;
 }
 .mass__cards {
   display: -ms-grid;
@@ -1574,15 +1492,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-bottom: 100px;
-}
-.city__title {
-  font-size: 4.125em;
-  line-height: 102.2%;
-  /* or 67px */
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 .city__date {
   font-weight: 700;
@@ -1920,24 +1829,6 @@ body {
   text-align: center;
   margin-top: 80px;
 }
-.modal2 .modal__title {
-  font-weight: 400;
-  font-size: 2.1875em;
-  line-height: 102.2%;
-  max-width: 570px;
-  text-align: center;
-  margin: 0 auto;
-  /* or 36px */
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  /* text-gradient */
-  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%), #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
 .modal2 .modal__cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2084,22 +1975,6 @@ body {
           box-shadow: 0px 0px 120px rgba(202, 45, 255, 0.8);
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
-}
-.modal3 .modal__title {
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 102.2%;
-  margin-top: 20px;
-  /* identical to box height, or 36px */
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  /* text-gradient */
-  background: linear-gradient(93.44deg, #3b68e6 0.84%, #31f3ff 50.94%, #fb3fff 100%), #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
 .modal3 .modal__button {
   text-align: center;
@@ -2261,6 +2136,11 @@ body {
 }
 
 @media (max-width: 1600px) {
+  .title,
+.colored__title {
+    font-size: 4em;
+  }
+
   .footer__content {
     font-size: 12px;
   }
@@ -2517,11 +2397,16 @@ body {
     font-size: 0.9em;
   }
 
+  .title {
+    font-size: 3em;
+  }
+
+  .colored__title {
+    font-size: 3em;
+  }
+
   .sale {
     margin-top: 80px;
-  }
-  .sale__title {
-    font-size: 3em;
   }
   .sale__subtitle {
     font-size: 1em;
@@ -2535,9 +2420,6 @@ body {
 
   .units {
     margin-top: 100px;
-  }
-  .units__title {
-    font-size: 3em;
   }
   .units__cards {
     margin-top: 40px;
@@ -2560,18 +2442,11 @@ body {
   .tokenomics {
     margin-top: 60px;
   }
-  .tokenomics__title {
-    font-size: 3em;
-    margin-bottom: 60px;
-  }
 
   .chart {
     margin-top: 30px;
     padding-bottom: 30px;
     background-size: cover;
-  }
-  .chart__title {
-    font-size: 3em;
   }
   .chart__colors {
     margin: 0 auto;
@@ -2615,16 +2490,12 @@ body {
   .team {
     padding: 40px 0px;
   }
-  .team__title {
-    font-size: 3em;
-  }
   .team__cards {
     margin-top: 40px;
   }
 
   .partners__title {
     padding-top: 40px;
-    font-size: 3em;
   }
   .partners__cards {
     overflow-x: scroll;
@@ -2641,9 +2512,6 @@ body {
 
   .mass {
     margin-top: 50px;
-  }
-  .mass__title {
-    font-size: 3em;
   }
   .mass__cards {
     -ms-flex-wrap: wrap;
@@ -2703,9 +2571,6 @@ body {
   .roadmap {
     padding-top: 40px;
     padding-bottom: 40px;
-  }
-  .roadmap__title {
-    font-size: 3em;
   }
   .roadmap .cards {
     margin-top: 40px;
@@ -2831,6 +2696,14 @@ body {
   }
 }
 @media (max-width: 600px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .colored__title {
+    font-size: 2em;
+  }
+
   .team__cards {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -2900,16 +2773,6 @@ body {
     padding: 30px 0px;
   }
 
-  .tokenomics__chart {
-    display: block;
-  }
-
-  .tokenomics__image-wrap::after {
-    -webkit-transform: translate(-48%, -50%);
-            transform: translate(-48%, -50%);
-    background-size: cover;
-  }
-
   .city .item-4 {
     display: none;
   }
@@ -2936,6 +2799,17 @@ body {
   .tokenomics__buttons-item:hover {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+  .tokenomics__chart {
+    display: block;
+  }
+  .tokenomics__title {
+    margin-bottom: 100px;
+  }
+  .tokenomics__image-wrap::after {
+    -webkit-transform: translate(-48%, -50%);
+            transform: translate(-48%, -50%);
+    background-size: cover;
   }
 
   .partners__card {
@@ -2980,9 +2854,6 @@ body {
   }
 }
 @media (max-width: 1530px) {
-  .benefits__title {
-    font-size: 3em;
-  }
   .benefits__scheme {
     background: none;
   }
@@ -3021,10 +2892,6 @@ body {
   }
 }
 @media (max-width: 1375px) {
-  .tokenomics__title {
-    font-size: 2em;
-  }
-
   .city {
     height: 150vh;
   }

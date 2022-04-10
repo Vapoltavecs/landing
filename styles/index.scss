@@ -156,6 +156,42 @@ body {
   }
 }
 
+.title {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 102.2%;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.colored__title {
+  font-weight: 300;
+  font-size: 6em;
+  line-height: 102.2%;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+      93.44deg,
+      #3b68e6 0.84%,
+      #31f3ff 50.94%,
+      #fb3fff 100%
+    ),
+    #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .header {
   font-size: 14px;
   font-weight: 500;
@@ -246,13 +282,7 @@ body {
   text-align: center;
   background-position: center center;
   &__title {
-    letter-spacing: 0.05em;
-    text-align: center;
     padding-top: 70px;
-    color: $white;
-    font-size: 3.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
   }
 
   &__subtitle {
@@ -454,16 +484,7 @@ body {
     justify-content: space-around;
     color: white;
   }
-  &__title {
-    font-size: 4.688em;
-    color: $white;
-    text-align: center;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    font-style: normal;
-    text-transform: uppercase;
-    line-height: 102.2%;
-  }
+
   &__subtitle {
     color: $gray;
     font-weight: 300;
@@ -593,14 +614,7 @@ body {
   box-sizing: border-box;
   background-size: cover;
   color: $white;
-  &__title {
-    font-weight: 400;
-    font-size: 4.688em;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 102.2%;
-  }
+
   &__subtitle {
     color: $gray;
     text-transform: uppercase;
@@ -750,14 +764,6 @@ body {
 
   background: url("../images/benefits/bg-benefits.png") center center;
 
-  &__title {
-    text-align: center;
-    font-size: 4.688em;
-    text-transform: uppercase;
-    color: $white;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-  }
   &__subtitle {
     margin-top: 30px;
     text-align: center;
@@ -937,25 +943,6 @@ body {
   background-size: cover;
   width: 100%;
   &__title {
-    font-weight: 300;
-    font-size: 6em;
-    line-height: 102.2%;
-
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-
-    background: linear-gradient(
-        93.44deg,
-        #3b68e6 0.84%,
-        #31f3ff 50.94%,
-        #fb3fff 100%
-      ),
-      #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
     margin-bottom: 200px;
   }
   &__image-wrap {
@@ -1165,27 +1152,7 @@ body {
   background: url("../images/chart/bg.png") center center;
   background-size: cover;
   border-bottom: 1px solid $white;
-  &__title {
-    font-weight: 300;
-    font-size: 6em;
-    line-height: 102.2%;
 
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-
-    background: linear-gradient(
-        93.44deg,
-        #3b68e6 0.84%,
-        #31f3ff 50.94%,
-        #fb3fff 100%
-      ),
-      #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  }
   &__colors {
     display: flex;
     flex-wrap: wrap;
@@ -1397,26 +1364,7 @@ body {
     flex-wrap: wrap;
     box-sizing: border-box;
   }
-  &__title {
-    font-weight: 300;
-    font-size: 6em;
-    line-height: 102.2%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
 
-    background: linear-gradient(
-        93.44deg,
-        #3b68e6 0.84%,
-        #31f3ff 50.94%,
-        #fb3fff 100%
-      ),
-      #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  }
   &__card {
     box-sizing: border-box;
     position: relative;
@@ -1508,24 +1456,7 @@ body {
   padding-top: 200px;
   padding-bottom: 290px;
   border-bottom: 1px solid rgba($color: $white, $alpha: 0.3);
-  &__title {
-    font-weight: 400;
-    font-size: 6em;
-    line-height: 102.2%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    background: linear-gradient(
-      93.44deg,
-      #3b68e6 0.84%,
-      #31f3ff 50.94%,
-      #fb3fff 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  }
+
   .cards {
     display: flex;
     align-items: center;
@@ -1587,27 +1518,7 @@ body {
 
 .partners {
   &__title {
-    font-weight: 300;
-    font-size: 6em;
-    padding-top: 200px;
-    line-height: 102.2%;
-    /* or 98px */
-
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-
-    background: linear-gradient(
-        93.44deg,
-        #3b68e6 0.84%,
-        #31f3ff 50.94%,
-        #fb3fff 100%
-      ),
-      #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    margin-top: 100px;
   }
   &__cards {
     display: flex;
@@ -1632,29 +1543,8 @@ body {
 }
 
 .mass {
-  margin-top: 160px;
-  &__title {
-    font-weight: 300;
-    font-size: 6em;
-    line-height: 102.2%;
-    /* or 98px */
+  margin-top: 200px;
 
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-
-    background: linear-gradient(
-        93.44deg,
-        #3b68e6 0.84%,
-        #31f3ff 50.94%,
-        #fb3fff 100%
-      ),
-      #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  }
   &__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1693,17 +1583,7 @@ body {
   text-align: center;
   box-sizing: border-box;
   padding-bottom: 100px;
-  &__title {
-    font-size: 4.125em;
-    line-height: 102.2%;
-    /* or 67px */
 
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-
-    color: #ffffff;
-  }
   &__date {
     font-weight: 700;
     color: $ocean;
@@ -2034,33 +1914,7 @@ body {
       text-align: center;
       margin-top: 80px;
     }
-    &__title {
-      font-weight: 400;
-      font-size: 2.1875em;
-      line-height: 102.2%;
-      max-width: 570px;
-      text-align: center;
-      margin: 0 auto;
-      /* or 36px */
 
-      text-align: center;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-
-      /* text-gradient */
-
-      background: linear-gradient(
-          93.44deg,
-          #3b68e6 0.84%,
-          #31f3ff 50.94%,
-          #fb3fff 100%
-        ),
-        #ffffff;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-    }
     &__cards {
       display: flex;
       align-items: center;
@@ -2192,31 +2046,6 @@ body {
     box-shadow: 0px 0px 120px rgba(202, 45, 255, 0.8);
     transform: translateX(-50%) translateY(-50%);
 
-    &__title {
-      font-weight: 400;
-      font-size: 35px;
-      line-height: 102.2%;
-      margin-top: 20px;
-      /* identical to box height, or 36px */
-
-      text-align: center;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-
-      /* text-gradient */
-
-      background: linear-gradient(
-          93.44deg,
-          #3b68e6 0.84%,
-          #31f3ff 50.94%,
-          #fb3fff 100%
-        ),
-        #ffffff;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-    }
     &__button {
       text-align: center;
       .button {
@@ -2353,6 +2182,11 @@ body {
 }
 
 @media (max-width: 1600px) {
+  .title,
+  .colored__title {
+    font-size: 4em;
+  }
+
   .footer {
     &__content {
       font-size: 12px;
@@ -2584,11 +2418,15 @@ body {
       }
     }
   }
+  .title {
+    font-size: 3em;
+  }
+  .colored__title {
+    font-size: 3em;
+  }
   .sale {
     margin-top: 80px;
-    &__title {
-      font-size: 3em;
-    }
+
     &__subtitle {
       font-size: 1em;
       margin-top: 30px;
@@ -2601,9 +2439,7 @@ body {
 
   .units {
     margin-top: 100px;
-    &__title {
-      font-size: 3em;
-    }
+
     &__cards {
       margin-top: 40px;
       flex-wrap: wrap;
@@ -2621,19 +2457,13 @@ body {
 
   .tokenomics {
     margin-top: 60px;
-    &__title {
-      font-size: 3em;
-      margin-bottom: 60px;
-    }
   }
   .chart {
     margin-top: 30px;
     padding-bottom: 30px;
 
     background-size: cover;
-    &__title {
-      font-size: 3em;
-    }
+
     &__colors {
       margin: 0 auto;
       flex-direction: wrap;
@@ -2669,9 +2499,7 @@ body {
   }
   .team {
     padding: 40px 0px;
-    &__title {
-      font-size: 3em;
-    }
+
     &__cards {
       margin-top: 40px;
     }
@@ -2679,7 +2507,6 @@ body {
   .partners {
     &__title {
       padding-top: 40px;
-      font-size: 3em;
     }
     &__cards {
       overflow-x: scroll;
@@ -2697,9 +2524,7 @@ body {
   }
   .mass {
     margin-top: 50px;
-    &__title {
-      font-size: 3em;
-    }
+
     &__cards {
       flex-wrap: wrap;
       justify-content: center;
@@ -2755,9 +2580,7 @@ body {
   .roadmap {
     padding-top: 40px;
     padding-bottom: 40px;
-    &__title {
-      font-size: 3em;
-    }
+
     .cards {
       margin-top: 40px;
       overflow-x: scroll;
@@ -2870,6 +2693,12 @@ body {
 }
 
 @media (max-width: 600px) {
+  .title {
+    font-size: 2em;
+  }
+  .colored__title {
+    font-size: 2em;
+  }
   .team {
     &__cards {
       justify-content: space-between;
@@ -2933,14 +2762,7 @@ body {
       }
     }
   }
-
-  .tokenomics__chart {
-    display: block;
-  }
-  .tokenomics__image-wrap::after {
-    transform: translate(-48%, -50%);
-    background-size: cover;
-  }
+  
 
   .city {
     .item-4 {
@@ -2971,6 +2793,16 @@ body {
           transform: scale(1);
         }
       }
+    }
+    &__chart {
+      display: block;
+    }
+    &__title {
+      margin-bottom: 100px;
+    }
+    &__image-wrap::after {
+      transform: translate(-48%, -50%);
+      background-size: cover;
     }
   }
 
@@ -3022,9 +2854,6 @@ body {
 
 @media (max-width: 1530px) {
   .benefits {
-    &__title {
-      font-size: 3em;
-    }
     &__scheme {
       background: none;
     }
@@ -3068,11 +2897,6 @@ body {
 }
 
 @media (max-width: 1375px) {
-  .tokenomics {
-    &__title {
-      font-size: 2em;
-    }
-  }
   .city {
     height: 150vh;
   }

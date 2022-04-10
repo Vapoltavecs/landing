@@ -113,6 +113,8 @@ const langWrap = document.querySelectorAll(".languange");
   });
 });
 
+//Mobile menu
+
 burger.addEventListener("click", () => {
   mobileMenu.classList.add("active");
 });
